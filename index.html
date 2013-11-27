@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible">
+    <title>Zoom / 360SHOTS Javascript Player</title>
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+    <script src="js/jquery-1.7.2.min.js"     type="text/javascript"></script>
+    <script src="js/jquery-ui-1.8.19.min.js"  type="text/javascript"></script>
+    <script src="js/gestalt.js"          type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/jquery.fancybox.css" media="screen" />
+
+    <!-- Here you can change the Theme href="css/THEME/jquery-ui.css" --> 
+    <link rel="stylesheet" type="text/css" href="css/flatDesignMarc/jquery-uiM.css">
+    <link rel="stylesheet" type="text/css" href="css/gestalt.css">
+
+    <style type="text/css" media="screen">
+        html, body { background: none; }
+        body { margin: 0; padding: 0; font-size: 75%; }
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+        var options = $.queryParams({
+                url: '.',
+                size: 'small',
+				controls: 'zoom',
+                keyboard: true,
+                mouse: 20,
+                animate: 'endless',
+                framerate: 10,
+                wait: 60,
+                margin: true
+            });
+            		
+       $(function() {
+			$('#gestalt').gestalt(options);
+        });
+    </script>
+
+	<link rel="stylesheet" type="text/css" href="css/zoom.css">
+	<script src="js/zoom.js" type="text/javascript"></script>
+		<script>	
+			var zoom_options = $.queryParams({
+				height				:	"350px",	// px
+				width				:	"350px",	// px
+				position			:	"right",	// right,left,top,bottom
+				springer_background :	"#000",		// Farbe
+				margin: 10, // Abstand der Zoom-Box zum Player
+				pointer: false,
+				pointer_bgcolor: "#CCCCCC",
+				pointer_fontcolor: "#000000",
+				pointer_text: "RocknRoll!!!!!!"
+
+			});
+			
+			$(function(){
+				$('.zoom-box').zoom(zoom_options);
+			});
+		</script>
+</head>
+<body>
+
+
+
+    <div id="gestalt">	</div>
+
+
+</body>
+</html>
+

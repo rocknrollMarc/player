@@ -1,0 +1,48 @@
+
+/* begin the gestalt styles */
+.ui-gs {
+    display: inline-block; 
+    border: none;
+    float: left;  /* IE7 won't apply inline-block to divs */
+}
+.ui-gs :focus { 
+    outline: none; 
+}
+.ui-gs :focus::-moz-focus-inner { 
+    border-color: transparent; 
+}
+
+.ui-gs-images {
+    position: relative; 
+    overflow: hidden;
+    width: 550px; 
+    height: 425px;
+}
+.ui-gs-images img { 
+    position: absolute; 
+    top: 0; left: 0; 
+    display: none; 
+}
+.ui-gs-images .ui-gs-progressbar { 
+    z-index: 42; 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    height: 10px; 
+    width: 200px; 
+}
+/*Position der Button*/
+.ui-gs-controls { 
+    margin: 15px auto 10px; 
+    width: 553px;  
+
+}
+
+/*Abstand der Button*/
+.ui-gs-controls button {  margin: 15 auto 10;}
+
+/*Abstand zwischen dem "Next-Button" und dem "Resize-Button*/
+.ui-gs-controls button.ui-gs-resize { 
+    margin-left: 11px; 
+}
+

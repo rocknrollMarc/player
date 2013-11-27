@@ -1,0 +1,156 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$my-icons-sprite-base-class: ".my-icons-sprite" !default;
+$my-icons-sprite-dimensions: false !default;
+$my-icons-position: 0% !default;
+$my-icons-spacing: 0 !default;
+$my-icons-repeat: no-repeat !default;
+$my-icons-prefix: '' !default;
+$my-icons-clean-up: true !default;
+$my-icons-layout:vertical !default;
+$my-icons-inline: false !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $my-icons-next-position: $my-icons-position !default;
+   $my-icons-next-spacing:  $my-icons-spacing !default;
+   $my-icons-next-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-nexthover-position: $my-icons-position !default;
+   $my-icons-nexthover-spacing:  $my-icons-spacing !default;
+   $my-icons-nexthover-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-pause-position: $my-icons-position !default;
+   $my-icons-pause-spacing:  $my-icons-spacing !default;
+   $my-icons-pause-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-pausehover-position: $my-icons-position !default;
+   $my-icons-pausehover-spacing:  $my-icons-spacing !default;
+   $my-icons-pausehover-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-play-position: $my-icons-position !default;
+   $my-icons-play-spacing:  $my-icons-spacing !default;
+   $my-icons-play-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-playhover-position: $my-icons-position !default;
+   $my-icons-playhover-spacing:  $my-icons-spacing !default;
+   $my-icons-playhover-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-prev-position: $my-icons-position !default;
+   $my-icons-prev-spacing:  $my-icons-spacing !default;
+   $my-icons-prev-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-prevhover-position: $my-icons-position !default;
+   $my-icons-prevhover-spacing:  $my-icons-spacing !default;
+   $my-icons-prevhover-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-zoom-position: $my-icons-position !default;
+   $my-icons-zoom-spacing:  $my-icons-spacing !default;
+   $my-icons-zoom-repeat:   $my-icons-repeat !default;
+ 
+   $my-icons-zoomhover-position: $my-icons-position !default;
+   $my-icons-zoomhover-spacing:  $my-icons-spacing !default;
+   $my-icons-zoomhover-repeat:   $my-icons-repeat !default;
+ 
+
+ $my-icons-sprites: sprite-map("my-icons/*.png",
+ 
+   $my-icons-next-position: $my-icons-next-position, 
+   $my-icons-next-spacing:  $my-icons-next-spacing, 
+   $my-icons-next-repeat:   $my-icons-next-repeat,
+ 
+   $my-icons-nexthover-position: $my-icons-nexthover-position, 
+   $my-icons-nexthover-spacing:  $my-icons-nexthover-spacing, 
+   $my-icons-nexthover-repeat:   $my-icons-nexthover-repeat,
+ 
+   $my-icons-pause-position: $my-icons-pause-position, 
+   $my-icons-pause-spacing:  $my-icons-pause-spacing, 
+   $my-icons-pause-repeat:   $my-icons-pause-repeat,
+ 
+   $my-icons-pausehover-position: $my-icons-pausehover-position, 
+   $my-icons-pausehover-spacing:  $my-icons-pausehover-spacing, 
+   $my-icons-pausehover-repeat:   $my-icons-pausehover-repeat,
+ 
+   $my-icons-play-position: $my-icons-play-position, 
+   $my-icons-play-spacing:  $my-icons-play-spacing, 
+   $my-icons-play-repeat:   $my-icons-play-repeat,
+ 
+   $my-icons-playhover-position: $my-icons-playhover-position, 
+   $my-icons-playhover-spacing:  $my-icons-playhover-spacing, 
+   $my-icons-playhover-repeat:   $my-icons-playhover-repeat,
+ 
+   $my-icons-prev-position: $my-icons-prev-position, 
+   $my-icons-prev-spacing:  $my-icons-prev-spacing, 
+   $my-icons-prev-repeat:   $my-icons-prev-repeat,
+ 
+   $my-icons-prevhover-position: $my-icons-prevhover-position, 
+   $my-icons-prevhover-spacing:  $my-icons-prevhover-spacing, 
+   $my-icons-prevhover-repeat:   $my-icons-prevhover-repeat,
+ 
+   $my-icons-zoom-position: $my-icons-zoom-position, 
+   $my-icons-zoom-spacing:  $my-icons-zoom-spacing, 
+   $my-icons-zoom-repeat:   $my-icons-zoom-repeat,
+ 
+   $my-icons-zoomhover-position: $my-icons-zoomhover-position, 
+   $my-icons-zoomhover-spacing:  $my-icons-zoomhover-spacing, 
+   $my-icons-zoomhover-repeat:   $my-icons-zoomhover-repeat,
+ 
+ $layout: $my-icons-layout,
+ $cleanup: $my-icons-clean-up
+ );
+
+
+// All sprites should extend this class
+// The my-icons-sprite mixin will do so for you.
+@if $my-icons-inline {
+  #{$my-icons-sprite-base-class} {
+    background-image: inline-sprite($my-icons-sprites);
+  } 
+} @else {
+  #{$my-icons-sprite-base-class} {
+    background: $my-icons-sprites no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function my-icons-sprite-width($name) {
+    $file: sprite_file($my-icons-sprites, $name);
+    @return image-width($file);
+  }
+
+  @function my-icons-sprite-height($name) {
+    $file: sprite_file($my-icons-sprites, $name);
+    @return image-height($file);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin my-icons-sprite-dimensions($name) {
+  @include sprite-dimensions($my-icons-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin my-icons-sprite-position($name, $offset-x: 0, $offset-y: 0) {
+  @include sprite-background-position($my-icons-sprites, $name, $offset-x, $offset-y)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin my-icons-sprite($name, $dimensions: $my-icons-sprite-dimensions, $offset-x: 0, $offset-y: 0) {
+  @extend #{$my-icons-sprite-base-class};
+  @include sprite($my-icons-sprites, $name, $dimensions, $offset-x, $offset-y)
+}
+
+@mixin my-icons-sprites($sprite-names, $dimensions: $my-icons-sprite-dimensions, $prefix: sprite-map-name($my-icons-sprites), $offset-x: 0, $offset-y: 0) {
+  @include sprites($my-icons-sprites, $sprite-names, $my-icons-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y)
+}
+
+// Generates a class for each sprited image.
+@mixin all-my-icons-sprites($dimensions: $my-icons-sprite-dimensions, $prefix: sprite-map-name($my-icons-sprites), $offset-x: 0, $offset-y: 0) {
+  @include my-icons-sprites(next nexthover pause pausehover play playhover prev prevhover zoom zoomhover, $dimensions, $prefix, $offset-x, $offset-y);
+}
