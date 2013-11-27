@@ -494,7 +494,7 @@ jq.widget('ui.gestalt', jq.ui.mouse, {
         this.element.append(
             jq('<div class="ui-gs-controls"></div>')
             .append('<button title="prev" class="zoomClass buttonPrev">Prev</button>')
-            .append('<button title="play" class="buttonPlay/buttonPause">Play/Pause</button>')
+            .append('<button title="play" class="buttonPlay">Play</button>')
             .append('<button title="next" class="zoomClass buttonNext">Next</button>')
         );
 
@@ -505,7 +505,7 @@ jq.widget('ui.gestalt', jq.ui.mouse, {
         }).addClass('ui-state-disabled').click(function(event) { self.next(event);if(self.options.controls === 'zoom'){self.changeZoomImage();}  return false; })
         .next().button({
             text: false,
-            icons: { primary: 'ui-icon-play-default' }
+            icons: { primary: 'buttonPlay' }
         }).addClass('ui-state-disabled').click(function(event) { self.startStop(event); return false; })
         .next().button({
             text: false,
@@ -652,15 +652,14 @@ if (this.options.controls === 'resizeable') {
         .bind('gestaltstart', function() {
             $button.attr({
   title: "pause",
-  id: "buttonPause"
 })
             .find('span.ui-button-icon-primary')
-                .removeClass('ui-icon-play-default').addClass('buttonPause');
+                .removeClass('buttonPlay').addClass('buttonPause');
         })
         .bind('gestaltstop', function() {
             $button.attr('title', 'play')
             .find('span.ui-button-icon-primary')
-                .removeClass('ui-icon-pause-default').addClass('ui-icon-play');
+                .removeClass('buttonPause').addClass('buttonPlay');
         });
 
         var width = 0;

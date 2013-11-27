@@ -698,7 +698,6 @@ body .ui-tooltip {
  *---------------------------------- */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid white;
-  background-image: url(images/buttonsDefault.png);
   background-repeat: no-repeat;
   font-weight: normal;
   background-color:transparent;
@@ -713,7 +712,6 @@ body .ui-tooltip {
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
   border: 1px solid white;
-  background-image: url(images/buttonsDefault.png);
   background-repeat: no-repeat;
   font-weight: normal;
   color: #f22628; }
@@ -727,7 +725,6 @@ body .ui-tooltip {
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
   border: 1px solid white;
-  background-image: url(images/buttonsDefault.png);
   background-repeat: no-repeat;
   font-weight: normal;
   color: black; }
@@ -743,7 +740,6 @@ body .ui-tooltip {
  *---------------------------------- */
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid white;
-  background-image: url(images/buttonsDefault.png);
   background-repeat: no-repeat;
   color: #030303; }
 
@@ -803,6 +799,12 @@ body .ui-tooltip {
 #buttonPause {
   background-position: 0 0; }
 */
+
+#buttonPause {
+  background-image: url(images/pause.png); !importan
+}
+
+
 #gestalt.ui-gs div.ui-gs-controls button.buttonPlay {
   background-image: url(images/play.png); }
   #gestalt.ui-gs div.ui-gs-controls button.buttonPlay:hover {
@@ -823,6 +825,16 @@ body .ui-tooltip {
   background-image: url(images/pause.png); }
   #gestalt.ui-gs div.ui-gs-controls button.buttonPause:hover {
     background-image: url(images/pausehover.png); }
+#gestalt.ui-gs div.ui-gs-controls button.buttonPause {
+  background-image: url(images/pause.png); }
+  #gestalt.ui-gs div.ui-gs-controls button#buttonPause.buttonPause:hover {
+    background-image: url(images/pausehover.png); }
+#gestalt.ui-gs div.ui-gs-controls button.buttonPause.buttonPlay {
+  background-image: url(images/pause.png);}
+  #gestalt.ui-gs div.ui-gs-controls button.buttonPause.buttonPlay:hover {
+   background-image: url(images/pausehover.png);}
+
+
 */
 /* Misc visuals
  *---------------------------------- */
