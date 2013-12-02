@@ -1,4 +1,5 @@
 /*! jQuery UI - v1.10.3 - 2013-10-25
+ * oo
  ** http://jqueryui.com
  ** Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css, jquery.ui.theme.css
  ** To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Segoe%20UI%2CHelvetica%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=0px&bgColorHeader=%239fda58&bgTextureHeader=flat&bgImgOpacityHeader=85&borderColorHeader=%23000000&fcHeader=%23222222&iconColorHeader=%231f1f1f&bgColorContent=%23ffffff&bgTextureContent=flat&bgImgOpacityContent=100&borderColorContent=%23ffffff&fcContent=%23000000&iconColorContent=%23000000&bgColorDefault=%23FFFFFF&bgTextureDefault=flat&bgImgOpacityDefault=100&borderColorDefault=%23ffffff&fcDefault=%23000000&iconColorDefault=%23000000&bgColorHover=%23FFFFFF&bgTextureHover=flat&bgImgOpacityHover=100&borderColorHover=%23ffffff&fcHover=%23f22628&iconColorHover=%23ff1624&bgColorActive=%23FFFFFF&bgTextureActive=flat&bgImgOpacityActive=50&borderColorActive=%23ffffff&fcActive=%23000000&iconColorActive=%23000000&bgColorHighlight=%23ffffff&bgTextureHighlight=flat&bgImgOpacityHighlight=55&borderColorHighlight=%23ffffff&fcHighlight=%23030303&iconColorHighlight=%23000000&bgColorError=%23f6ecd5&bgTextureError=gloss_wave&bgImgOpacityError=95&borderColorError=%23f1ac88&fcError=%2374736d&iconColorError=%23cd0a0a&bgColorOverlay=%23262626&bgTextureOverlay=glow_ball&bgImgOpacityOverlay=50&opacityOverlay=30&bgColorShadow=%23303030&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=50&thicknessShadow=6px&offsetTopShadow=-6px&offsetLeftShadow=-6px&cornerRadiusShadow=0px&tr%26ffDefault=Helvetica%2CArial%2Csans-serif
@@ -781,58 +782,39 @@ body .ui-tooltip {
 
 .ui-widget-content .ui-icon, .ui-widget-header .ui-icon, .ui-state-default .ui-icon, .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-active .ui-icon {
  // background-image: url(images/buttonsDefault.png); }
-
-/* positioning */
-  /*
 #buttonPlay {
-  background-position: 0 0; }
-
-#buttonPrev {
-  background-position: -80px 0; }
-
-#buttonNext {
-  background-position: -120px 0; }
-
-#buttonZoom {
-  background-position: -160px 0; }
-
-#buttonPause {
-  background-position: 0 0; }
-*/
-
-#buttonPause {
-  background-image: url(images/pause.png); !importan
+  background-image: url(images/play.png);
+    #buttonPlay:hover {
+      background-image: url(images/playhover.png);
+    }
 }
 
 
-#gestalt.ui-gs div.ui-gs-controls button.buttonPlay {
+buttonPause {
+  background-image: url(images/pause.png)};
+  buttonPause:hover {
+    background-image: url(images/pausehover.png);}
+
+button.buttonPlay {
   background-image: url(images/play.png); }
-  #gestalt.ui-gs div.ui-gs-controls button.buttonPlay:hover {
+  button.buttonPlay:hover {
     background-image: url(images/playhover.png); }
-#gestalt.ui-gs div.ui-gs-controls button.buttonPrev {
-  background-image: url(images/prev.png); }
-  #gestalt.ui-gs div.ui-gs-controls button.buttonPrev:hover {
-    background-image: url(images/prevhover.png); }
-#gestalt.ui-gs div.ui-gs-controls button.buttonNext {
-  background-image: url(images/next.png); }
-  #gestalt.ui-gs div.ui-gs-controls button.buttonNext:hover {
-    background-image: url(images/nexthover.png); }
-#gestalt.ui-gs div.ui-gs-controls button.buttonZoom {
-  background-image: url(images/zoom.png); }
-  #gestalt.ui-gs div.ui-gs-controls button.buttonZoom:hover {
-    background-image: url(images/zoomhover.png); }
-#gestalt.ui-gs div.ui-gs-controls button.buttonPause {
-  background-image: url(images/pause.png); }
-  #gestalt.ui-gs div.ui-gs-controls button.buttonPause:hover {
-    background-image: url(images/pausehover.png); }
-#gestalt.ui-gs div.ui-gs-controls button.buttonPause {
-  background-image: url(images/pause.png); }
-  #gestalt.ui-gs div.ui-gs-controls button#buttonPause.buttonPause:hover {
-    background-image: url(images/pausehover.png); }
-#gestalt.ui-gs div.ui-gs-controls button.buttonPause.buttonPlay {
+button.buttonPause{
   background-image: url(images/pause.png);}
-  #gestalt.ui-gs div.ui-gs-controls button.buttonPause.buttonPlay:hover {
-   background-image: url(images/pausehover.png);}
+  button.buttonPause:hover {
+    background-image: url(image/pausehover.png);}
+button.buttonPrev {
+  background-image: url(images/prev.png); }
+  button.buttonPrev:hover {
+    background-image: url(images/prevhover.png); }
+button.buttonNext {
+  background-image: url(images/next.png); }
+  button.buttonNext:hover {
+    background-image: url(images/nexthover.png); }
+button.buttonZoom {
+  background-image: url(images/zoom.png); }
+  button.buttonZoom:hover {
+    background-image: url(images/zoomhover.png); }
 
 
 */
