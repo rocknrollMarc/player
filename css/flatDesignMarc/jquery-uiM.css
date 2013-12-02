@@ -782,18 +782,26 @@ body .ui-tooltip {
 
 .ui-widget-content .ui-icon, .ui-widget-header .ui-icon, .ui-state-default .ui-icon, .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-active .ui-icon {
  // background-image: url(images/buttonsDefault.png); }
-#buttonPlay {
-  background-image: url(images/play.png);
-    #buttonPlay:hover {
+.buttonPlay {
+  background-image: url(images/play.png);}
+    .buttonPlay:hover {
       background-image: url(images/playhover.png);
-    }
+    
 }
 
 
-buttonPause {
+.buttonPause {
   background-image: url(images/pause.png)};
-  buttonPause:hover {
+ .buttonPause:hover {
     background-image: url(images/pausehover.png);}
+
+#buttonPause {
+  background-image: url(images/pause.png)};
+ #buttonPause:hover {
+    background-image: url(images/pausehover.png);}
+
+
+
 
 button.buttonPlay {
   background-image: url(images/play.png); }

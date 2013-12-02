@@ -578,7 +578,7 @@
             })
             .next().button({
                 text: false,
-                icons: {primary: 'buttonPlay'}
+                icons: {primary: ''}
             }).addClass('ui-state-disabled').click(function(event) {
                 self.startStop(event);
                 return false;
@@ -750,7 +750,7 @@
                 .removeClass('buttonPause').addClass('buttonPlay');
             });
             
-            var width = 0;
+            var width = 0
             jq('.ui-gs-controls button', context).each(function() {
                 width += jq(this).outerWidth(true);
             });
